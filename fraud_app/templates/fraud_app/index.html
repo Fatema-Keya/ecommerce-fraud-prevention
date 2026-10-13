@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Machinative Identity Theft Prevention & Research Platform</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header Navigation -->
+    <header class="bg-indigo-900 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-2xl font-bold">🛡️ E-Commerce Identity Guard & Research</h1>
+            <p class="text-sm text-indigo-200 mt-2 md:mt-0">BUP CSE Research Project | Team: Keya, Rahiul, Shiam, Farhad</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-10">
+
+        <!-- SECTION 1: Crypto Login Simulator -->
+        <section class="bg-white rounded-xl shadow-md p-6 border border-slate-100">
+            <h2 class="text-xl font-bold text-indigo-900 mb-4">🔐 Cryptographic Authentication Simulator (RSA vs ECC vs Hybrid)</h2>
+            <p class="text-sm text-slate-600 mb-6">Test and compare the processing execution time of different cryptographic models used to prevent credential stuffing in e-commerce logins.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Form Inputs -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Username / Email</label>
+                        <input type="text" id="username" value="user_bup" class="mt-1 w-full p-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Password</label>
+                        <input type="password" id="password" value="SuperSecure@123" class="mt-1 w-full p-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Select Encryption Mode</label>
+                        <select id="authMode" class="mt-1 w-full p-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="rsa">RSA-2048 Authentication</option>
+                            <option value="ecc">ECC (Elliptic Curve Cryptography)</option>
+                            <option value="hybrid">Hybrid (RSA + ECC Combined)</option>
+                        </select>
+                    </div>
+                    <button onclick="runCryptoLogin()" class="w-full bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition">
+                        Run Secure Login Test
+                    </button>
+                </div>
+
+                <!-- Result Box -->
+                <div class="bg-slate-900 text-emerald-400 p-6 rounded-xl font-mono text-sm flex flex-col justify-between shadow-inner">
+                    <div>
+                        <p class="text-slate-400 border-b border-slate-700 pb-2 mb-4">⚡ Execution Log & Performance Terminal</p>
+                        <div id="terminalOutput" class="space-y-2">
+                            <p class="text-slate-500">// Select a mode and click test to observe server-side execution time...</p>
+                        </div>
+                    </div>
+                    <div id="timerDisplay" class="mt-4 pt-4 border-t border-slate-800 text-right text-lg font-bold">
+                        Time: 0.00 ms
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Research Model & Overview -->
+        <section class="bg-white rounded-xl shadow-md p-6 border border-slate-100">
+            <h2 class="text-xl font-bold text-indigo-900 mb-4">📊 PLS-SEM Research & Statistical Overview</h2>
+            <p class="text-sm text-slate-600 mb-6">Structural Equation Modeling factors analyzing user perceptions toward machinative identity theft and willingness to trust (WT).</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <p class="text-sm text-indigo-600 font-semibold">PSUS (Perceived Susceptibility)</p>
+                    <p class="text-2xl font-bold text-indigo-900 mt-1">0.437</p>
+                    <span class="text-xs text-slate-500">Path Coefficient (T = 5.981)</span>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <p class="text-sm text-indigo-600 font-semibold">PS (Perceived Severity)</p>
+                    <p class="text-2xl font-bold text-indigo-900 mt-1">0.159</p>
+                    <span class="text-xs text-slate-500">Path Coefficient (T = 2.714)</span>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <p class="text-sm text-indigo-600 font-semibold">PEFF (Perceived Effectiveness)</p>
+                    <p class="text-2xl font-bold text-indigo-900 mt-1">0.129</p>
+                    <span class="text-xs text-slate-500">Path Coefficient (T = 2.036)</span>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <p class="text-sm text-indigo-600 font-semibold">COST (Perceived Cost)</p>
+                    <p class="text-2xl font-bold text-indigo-900 mt-1">0.079</p>
+                    <span class="text-xs text-slate-500">Path Coefficient (T = 1.201)</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CHATBOT SECTION -->
+    <section class="max-w-7xl mx-auto px-4 pb-12">
+        <div class="bg-white rounded-xl shadow-md p-6 border border-slate-100">
+            <h2 class="text-xl font-bold text-indigo-900 mb-2">🤖 Research AI Assistant & Chatbot</h2>
+            <p class="text-sm text-slate-600 mb-4">Click any suggested question below or ask about our PLS-SEM model, encryption performance, and survey results.</p>
+            
+            <!-- Quick Suggestion Chips -->
+            <div class="flex flex-wrap gap-2 mb-4">
+                <button onclick="sendPresetQuery('Tell me about PSUS factor')" class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-200 hover:bg-indigo-100 transition">📊 Tell me about PSUS factor</button>
+                <button onclick="sendPresetQuery('Compare RSA vs ECC execution time')" class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-200 hover:bg-indigo-100 transition">⚡ Compare RSA vs ECC</button>
+                <button onclick="sendPresetQuery('What is Hybrid authentication?')" class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-200 hover:bg-indigo-100 transition">🔐 What is Hybrid auth?</button>
+                <button onclick="sendPresetQuery('Who participated in the survey?')" class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-200 hover:bg-indigo-100 transition">👥 Survey details</button>
+            </div>
+
+            <!-- Chat Box Container -->
+            <div class="bg-slate-900 rounded-xl p-4 flex flex-col h-80 shadow-inner">
+                <!-- Messages Area -->
+                <div id="chatMessages" class="flex-1 overflow-y-auto space-y-3 pr-2 text-sm">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-600 text-white px-4 py-2 rounded-2xl rounded-tl-none max-w-md shadow">
+                            Hello! I am your project assistant. How can I help you explore our research data today?
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="mt-3 flex gap-2 pt-2 border-t border-slate-800">
+                    <input type="text" id="chatInput" placeholder="Ask a question about the project..." class="flex-1 bg-slate-800 text-white px-4 py-2 rounded-lg border border-slate-700 focus:outline-none focus:border-indigo-500 text-sm" onkeypress="handleKeyPress(event)">
+                    <button onclick="sendChatMessage()" class="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition text-sm font-semibold">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Chatbot & Typing Effect -->
+    <script>
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function sendPresetQuery(query) {
+            document.getElementById('chatInput').value = query;
+            sendChatMessage();
+        }
+
+        async function sendChatMessage() {
+            const inputField = document.getElementById('chatInput');
+            const messageContainer = document.getElementById('chatMessages');
+            const userText = inputField.value.trim();
+
+            if (!userText) return;
+
+            // 1. Append User Message
+            messageContainer.innerHTML += `
+                <div class="flex justify-end">
+                    <div class="bg-emerald-600 text-white px-4 py-2 rounded-2xl rounded-tr-none max-w-md shadow">
+                        ${userText}
+                    </div>
+                </div>
+            `;
+            inputField.value = '';
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+
+            // 2. Append Typing Indicator
+            const typingId = 'typing-' + Date.now();
+            messageContainer.innerHTML += `
+                <div id="${typingId}" class="flex items-start">
+                    <div class="bg-slate-800 text-slate-400 px-4 py-2 rounded-2xl rounded-tl-none text-xs italic animate-pulse">
+                        Bot is typing...
+                    </div>
+                </div>
+            `;
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+
+            try {
+                let response = await fetch('/api/chatbot/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: userText })
+                });
+
+                let data = await response.json();
+
+                // Remove Typing Indicator
+                document.getElementById(typingId).remove();
+
+                if (response.ok) {
+                    // Append Bot Reply with typing simulation effect
+                    appendBotReplyWithTyping(data.reply);
+                } else {
+                    messageContainer.innerHTML += `
+                        <div class="flex items-start">
+                            <div class="bg-rose-900 text-white px-4 py-2 rounded-2xl rounded-tl-none max-w-md">
+                                Sorry, I encountered an error answering that.
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (err) {
+                document.getElementById(typingId).remove();
+                messageContainer.innerHTML += `
+                    <div class="flex items-start">
+                        <div class="bg-rose-900 text-white px-4 py-2 rounded-2xl rounded-tl-none max-w-md">
+                            Network error connecting to assistant.
+                        </div>
+                    </div>
+                `;
+            }
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
+
+        function appendBotReplyWithTyping(text) {
+            const messageContainer = document.getElementById('chatMessages');
+            const botMsgDiv = document.createElement('div');
+            botMsgDiv.className = "flex items-start";
+            
+            const innerBubble = document.createElement('div');
+            innerBubble.className = "bg-slate-800 text-emerald-300 px-4 py-2 rounded-2xl rounded-tl-none max-w-md shadow text-sm font-mono";
+            botMsgDiv.appendChild(innerBubble);
+            messageContainer.appendChild(botMsgDiv);
+
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    innerBubble.innerHTML += text.charAt(i);
+                    i++;
+                    messageContainer.scrollTop = messageContainer.scrollHeight;
+                    setTimeout(typeWriter, 15); // typing speed
+                }
+            }
+            typeWriter();
+        }
+    </script>
+
+    <!-- JavaScript for API Interaction -->
+    <script>
+        async function runCryptoLogin() {
+            const mode = document.getElementById('authMode').value;
+            const password = document.getElementById('password').value;
+            const terminal = document.getElementById('terminalOutput');
+            const timerDisplay = document.getElementById('timerDisplay');
+
+            terminal.innerHTML = `<p class="text-yellow-400">[*] Initializing ${mode.toUpperCase()} encryption handshake...</p>`;
+            timerDisplay.innerText = "Processing...";
+
+            try {
+                let response = await fetch('/api/login-test/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ mode: mode, password: password })
+});
+
+                let data = await response.json();
+
+                if (response.ok) {
+                    terminal.innerHTML = `
+                        <p class="text-emerald-400">[✔] ${data.message}</p>
+                        <p class="text-slate-300">[i] Mode: ${data.mode}</p>
+                        <p class="text-slate-300">[i] Status: ${data.status}</p>
+                    `;
+                    timerDisplay.innerText = `Time: ${data.execution_time_ms} ms`;
+                } else {
+                    terminal.innerHTML = `<p class="text-rose-400">[✖] Error: ${data.error}</p>`;
+                    timerDisplay.innerText = "Failed";
+                }
+            } catch (err) {
+                terminal.innerHTML = `<p class="text-rose-400">[✖] Network Error: ${err}</p>`;
+                timerDisplay.innerText = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
